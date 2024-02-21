@@ -1,16 +1,16 @@
 <h1>All our Flats(<%= Flat.all.size %>)</h1>
 
-<div class="card_container d-flex">
+<div class="card_container d-flex flex-wrap  gap-3">
   <% @flats.each do |flat| %>
-<div class="card" style="width: 18rem;">
+<div class="card flex-fill" style="width: 18rem;">
   <img class="card-img-top" src="https://www.parismatch.be/resizer/u5KWmZt279KEl_pIj61tIpqy8UI=/1200x800/filters:format(jpeg):focal(545x362.5:555x352.5)/cloudfront-eu-central-1.images.arcpublishing.com/ipmgroup/NGSGLQEVRVHHTI36AGLGUSJWYE.jpg" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title"><%= flat.name %></h5>
     <p class="card-text"><%= flat.address %></p>
-    <i class="fa-solid fa-people-group"></i>
-    <i class="fa-solid fa-euro-sign"></i>
+    <i class="fa-solid fa-people-group px-3"> <%= flat.number_of_guests %></i>
+    <i class="fa-solid fa-euro-sign px-3"> <%= flat.price_per_night %></i>
   </div>
-  <div class="card-body">
+  <div class="card-body py-1">
     <a href="#" class="card-link">Card link</a>
     <a href="#" class="card-link">Another link</a>
     <a href="#" class="card-link">Another link</a>
