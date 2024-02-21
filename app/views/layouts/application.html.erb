@@ -13,10 +13,10 @@
 
   <body>
     <div class="navbar d-flex justify-content-between px-2 mt-0 bg-secondary text-white">
-      <div class="title"><h1>Fake AirBnB</h1></div>
+      <div class="title"><h1><%= link_to "Fake AirBnB", flats_path %></h1></div>
       <div class="right-container">
         <div class="search">search here</div>
-        <div class="add-flat">add flat here</div>
+        <div class="add-flat"><%= link_to "add flat", new_flat_path %></div>
       </div>
     </div>
     <div class="container m-auto" style="width: 80%">
